@@ -330,7 +330,7 @@ v3.3.0 is a minor release that adds new features, including custom templates and
 
 You can now create a new app using custom templates.
 
-We've published our existing templates as [`cra-template`](https://github.com/facebook/create-react-app/tree/main/packages/cra-template) and [`cra-template-typescript`](https://github.com/facebook/create-react-app/tree/main/packages/cra-template-typescript), but we expect to see many great templates from the community over the coming weeks.
+We've published our existing templates as [`cra-template`](https://github.com/itgro/create-react-app/tree/main/packages/cra-template) and [`cra-template-typescript`](https://github.com/itgro/create-react-app/tree/main/packages/cra-template-typescript), but we expect to see many great templates from the community over the coming weeks.
 
 The below command shows how you can create a new app with `cra-template-typescript`.
 
@@ -1094,11 +1094,11 @@ We now enforce [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html) with 
 
 ### TypeScript linting
 
-We now lint TypeScript files. You can see the list of [rules we enforce](https://github.com/facebook/create-react-app/blob/eee8491d57d67dd76f0806a7512eaba2ce9c36f0/packages/eslint-config-react-app/index.js#L89:L98) to check if your project is compatible. If you're using Visual Studio Code you can follow our guide to [setup up your editor to display lint warnings](https://facebook.github.io/create-react-app/docs/setting-up-your-editor#displaying-lint-output-in-the-editor).
+We now lint TypeScript files. You can see the list of [rules we enforce](https://github.com/itgro/create-react-app/blob/eee8491d57d67dd76f0806a7512eaba2ce9c36f0/packages/eslint-config-react-app/index.js#L89:L98) to check if your project is compatible. If you're using Visual Studio Code you can follow our guide to [setup up your editor to display lint warnings](https://facebook.github.io/create-react-app/docs/setting-up-your-editor#displaying-lint-output-in-the-editor).
 
 ### `browserslist` support in @babel/preset-env
 
-The `browserslist` config in your `package.json` is now used to control the output of your JavaScript files. You can use separate configuration for `development` and `production`. See [here](https://github.com/facebook/create-react-app/blob/b0cbf2caa18ee8267855b14578ebc3dee826f552/packages/react-scripts/package.json#L83-L94) for a good starting point which gives a good development experience, especially when using language features such as async/await, but still provides high compatibility with many browsers in production
+The `browserslist` config in your `package.json` is now used to control the output of your JavaScript files. You can use separate configuration for `development` and `production`. See [here](https://github.com/itgro/create-react-app/blob/b0cbf2caa18ee8267855b14578ebc3dee826f552/packages/react-scripts/package.json#L83-L94) for a good starting point which gives a good development experience, especially when using language features such as async/await, but still provides high compatibility with many browsers in production
 
 ### Remove --no-watch flag
 

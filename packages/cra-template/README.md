@@ -1,8 +1,18 @@
-# cra-template
+# cra-template-itgro
 
 This is the official base template for [Create React App](https://github.com/facebook/create-react-app).
 
-If you don't specify a template (for example, `--template typescript`), this template will be used by default.
+To use this template, add `--template itgro` when creating a new app.
+
+For example:
+
+```sh
+npx create-react-app my-app --template itgro
+
+# or
+
+yarn create react-app my-app --template itgro
+```
 
 For more information, please refer to:
 

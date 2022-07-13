@@ -1,10 +1,10 @@
 {
-  "name": "react-scripts",
-  "version": "5.0.1",
-  "description": "Configuration and scripts for Create React App.",
+  "name": "itgro-react-scripts",
+  "version": "5.0.4",
+  "description": "Itgro Configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/itgro/create-react-app.git",
     "directory": "packages/react-scripts"
   },
   "license": "MIT",
@@ -12,7 +12,7 @@
     "node": ">=14.0.0"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/itgro/create-react-app/issues"
   },
   "files": [
     "bin",
@@ -37,6 +37,8 @@
     "babel-preset-react-app": "^10.0.1",
     "bfj": "^7.0.2",
     "browserslist": "^4.18.1",
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "camelcase": "^6.2.1",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "css-loader": "^6.5.1",
@@ -69,6 +71,7 @@
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
     "style-loader": "^3.3.1",
+    "svg-spritemap-webpack-plugin": "^4.4.2",
     "tailwindcss": "^3.0.2",
     "terser-webpack-plugin": "^5.2.5",
     "webpack": "^5.64.4",
@@ -94,9 +97,16 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "Explorer >= 11",
+      "ExplorerMobile >= 11",
+      "last 3 Firefox versions",
+      "last 3 Chrome versions",
+      "last 3 ChromeAndroid versions",
+      "last 3 Opera versions",
+      "last 3 Edge versions",
+      "last 3 Safari versions",
+      "last 3 iOS versions",
+      "> 0.99% in RU"
     ],
     "development": [
       "last 1 chrome version",

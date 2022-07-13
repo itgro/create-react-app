@@ -66,7 +66,7 @@ web pages, and provide an engaging mobile experience:
   app icon and all. This eliminates the need for the app store.
 
 However, they [can make debugging deployments more
-challenging](https://github.com/facebook/create-react-app/issues/2398).
+challenging](https://github.com/itgro/create-react-app/issues/2398).
 
 The
 [`workbox-webpack-plugin`](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/)
@@ -115,7 +115,7 @@ following into account:
 
 1. After the initial caching is done, the [service worker lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
    controls when updated content ends up being shown to users. In order to guard against
-   [race conditions with lazy-loaded content](https://github.com/facebook/create-react-app/issues/3613#issuecomment-353467430),
+   [race conditions with lazy-loaded content](https://github.com/itgro/create-react-app/issues/3613#issuecomment-353467430),
    the default behavior is to conservatively keep the updated service worker in the "[waiting](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#waiting)"
    state. This means that users will end up seeing older content until they close (reloading is not
    enough) their existing, open tabs. See [this blog post](https://jeffy.info/2018/10/10/sw-in-c-r-a.html)

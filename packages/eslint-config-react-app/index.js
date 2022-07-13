@@ -247,7 +247,7 @@ module.exports = {
     ],
     'react/no-danger-with-children': 'warn',
     // Disabled because of undesirable warnings
-    // See https://github.com/facebook/create-react-app/issues/5204 for
+    // See https://github.com/itgro/create-react-app/issues/5204 for
     // blockers until its re-enabled
     // 'react/no-deprecated': 'warn',
     'react/no-direct-mutation-state': 'warn',

@@ -1,15 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+/_data
+/_logs
 /node_modules
+/public
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+/_infrastructure/docker-compose.override.yml
+/_infrastructure/docker-compose.staging.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+!/resources/views/vendor
+!/resources/vendor
+/resources/vendor/ui-kit/dist
+/resources/vendor/ui-kit/tools/node_modules
+/tests/bootstrap.local.php
+/storage/coverage
+/storage/api-docs
+!/storage/api-docs/*.yaml
+.php_cs.cache
+.~lock.*.xlsx#
+core
+_ide_helper.php
+.phpstorm.meta.php
+
+# CRA
+# dependencies
 /.pnp
 .pnp.js
 
 # testing
 /coverage
-
-# production
-/build
 
 # misc
 .DS_Store

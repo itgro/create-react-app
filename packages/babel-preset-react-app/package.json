@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/itgro/create-react-app/issues"
   },
   "files": [
     "create.js",
