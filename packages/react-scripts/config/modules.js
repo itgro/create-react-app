@@ -63,10 +63,17 @@ function getAdditionalModulePaths(options = {}) {
  * @param {*} options
  */
 function getWebpackAliases(options = {}) {
+  const packageJson = require(paths.appPackageJson);
+
+  const appAliases = {};
+  Object.entries(packageJson.laravel?.apps || {}).forEach(([name, entry]) => {
+    appAliases[`@${name}`] = path.dirname(entry);
+  })
+
   const baseUrl = options.baseUrl;
 
   if (!baseUrl) {
-    return {};
+    return appAliases;
   }
 
   const baseUrlResolved = path.resolve(paths.appPath, baseUrl);
@@ -74,8 +81,11 @@ function getWebpackAliases(options = {}) {
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
       src: paths.appSrc,
+      ...appAliases,
     };
   }
+
+  return appAliases;
 }
 
 /**

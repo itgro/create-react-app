@@ -113,6 +113,15 @@ function verifyTypeScriptSetup() {
     process.exit(1);
   }
 
+  const packageJson = require(paths.appPackageJson);
+
+  const appAliases = {};
+  Object.entries(packageJson.laravel?.apps || {}).forEach(([name, entry]) => {
+    appAliases[`@${name}/*`] = [
+      path.relative(paths.appPath, path.dirname(entry)) + `/*`,
+    ];
+  })
+
   const compilerOptions = {
     // These are suggested values and will be set when not present in the
     // tsconfig.json
@@ -156,7 +165,7 @@ function verifyTypeScriptSetup() {
           : 'react',
       reason: 'to support the new JSX transform in React 17',
     },
-    paths: { value: undefined, reason: 'aliased imports are not supported' },
+    paths: { value: appAliases },
   };
 
   const formatDiagnosticHost = {
