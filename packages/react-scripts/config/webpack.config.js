@@ -21,7 +21,6 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const SVGSpriteMapPlugin = require("svg-spritemap-webpack-plugin");
 const paths = require('./paths');
 const modules = require('./modules');
@@ -94,7 +93,7 @@ const hasJsxRuntime = (() => {
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
-module.exports = function (webpackEnv, {lanUrlForTerminal} = {}) {
+module.exports = function (webpackEnv) {
   const isEnvDevelopment = webpackEnv === 'development';
   const isEnvProduction = webpackEnv === 'production';
 
@@ -603,27 +602,6 @@ module.exports = function (webpackEnv, {lanUrlForTerminal} = {}) {
       ].filter(Boolean),
     },
     plugins: [
-      new BrowserSyncPlugin({
-        proxy: process.env.APP_URL,
-        serveStatic: [paths.appBuild],
-        port: 3000,
-        ui: false,
-        https: true,
-        cors: true,
-        open: false,
-        ghostMode: false,
-        notify: false,
-        reloadDebounce: 100,
-        reloadDelay: 100,
-        online: false,
-        logConnections: false,
-        injectChanges: true,
-        files: [
-          'resources/views/**/*.php',
-          `${paths.appBuild}/**/*`,
-        ],
-        watchEvents: [`add`, `change`],
-      }),
       packageJson.laravel.svgIcons &&
         new SVGSpriteMapPlugin(
           packageJson.laravel.svgIcons.input,
